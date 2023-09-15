@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee bean project</title>
+    <style>
+        
+            @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Raleway:wght@400;500;700&display=swap');
+
+
+    * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       outline: none;
+       border: none;
+
+    }
+     h1,h2,h3,h4,h5,h6 {
+        font-family: 'Oswald',sans-serif;
+
+     }
+
+    p{
+        font-family: Raleway,sans-serif;
+    }
+
+
+    .wrapper {
+        width: 100%;
+        margin: auto;
+    }
+
+    .nav {
+       overflow: auto;
+       width: 85%;
+       margin: 1em auto;
+    }
+
+    .nav h1 {
+        text-transform: uppercase;
+        width: 50%;
+        float: left;
+    }
+
+    .nav h1 a {
+        font-family: Oswald, sans-serif;
+        color: #96746b;
+        text-decoration:none;
+    }
+
+    .nav ul {
+        width: 50%;
+        float: left;
+        text-align: right;
+    }
+
+    .nav li {
+        display:inline-block;
+        font-weight: 600;
+        padding: 10px 10px;
+    }
+
+    .nav li a {
+        font-family: Raleway,sans serif;
+         color: #312a26;
+         text-decoration: none;
+    }
+
+    .banner {
+        background-image: url(assets/images/banner-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        width: 100%;
+        height: 670px;
+
+    }
+
+
+    .banner a {
+        text-decoration: none;
+        display:inline-block;
+        padding: 1em;
+        background-color: #312a26;
+        color: #fff;
+        font-family: 'Raleway',sans-serif;
+        font-weight: 700;
+        margin-top: 1em;
+    }
+
+
+    .banner-text {
+        position: absolute;
+        top: 50%;
+        left: 7.5%;
+        transform: translateY(-50%);
+        width: 45%;
+    }
+
+    .banner-text h2 {
+        font-size: 4em;
+        text-transform: uppercase;
+        color: #c7a17a;
+
+    }
+    
+    .banner-text h2 span {
+        color: #96746b;
+    }
+
+
+    .banner-text p {
+
+        color: #fff;
+    }
+
+
+    .ads {
+        width: 85%;
+        margin: 4em auto;
+        overflow: auto;
+    }
+
+    .ads-item1 {
+       background-image: url(assets/images/ads-img1.jpg);
+       margin-right: 1%;
+       background-size: cover;
+       background-position: center;
+       height: 350px;
+    }
+
+    .ads-item2 {
+       background-image: url(assets/images/ads-img2.jpg);
+       background-size: cover;
+       background-position: center;
+       height: 350px;
+
+    }
+
+    .ads-item3 {
+        background-image: url(assets/images/ads-img3.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        margin-right:5%;
+
+    }
+
+    .ads-item4 {
+        background-image: url(assets/images/ads-img4.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+
+    }
+
+    .ads-item5 {
+        background-image: url(assets/images/ads-img5.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        margin-right: 5%;
+    }
+    .ads-item6 {
+        background-image: url(assets/images/ads-img6.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+
+    }
+
+    
+
+
+
+    .ads-items {
+        width: 48.5%;
+        float: left;
+        margin-bottom: 3%;
+        position: relative;
+
+    }
+
+    .ads-text {
+        position: absolute;
+        top:30%;
+        left:10%;
+        transform: translate Y(-50%);
+        width: 40%;
+
+    }
+
+    .ads-text a {
+        display: block;
+        font-family: 'Raleway',sans serif;
+        color: #fff;
+        text-transform: uppercase;
+        margin-top: 1em;
+        text-shadow: 3px 3px 6px #312a26;
+        font-weight:700;
+    }
+
+    .ads-text h3 {
+        text-transform:uppercase;
+        font-size:2em;
+        color:#fff;
+        line-height: 1.2em;
+        text-shadow: 3px 3px 6px #312a26;
+    }
+
+    .section-header span {
+        font-family:Raleway,sans serif;
+        font-weight: 500;
+        font-style:  italic;
+        color: #c7a17a;
+    }
+
+    .section-header{
+        text-align: center;
+
+    }
+
+    .section-header h2 {
+        text-transform: uppercase;
+        color: #312a26;
+    }
+
+    
+
+    .section-header hr {
+         background-color: #c7a17a;
+         height: 2px;
+         width: 25%;
+         margin: auto;
+    }
+    
+    .merch {
+        width: 85%;
+        margin: 4em auto;
+        overflow: auto;
+
+    }
+    .merch-gallery {
+        margin-top: 2em;
+        overflow: auto;
+
+    }
+
+    .merch-items {
+      width: 24.25%;
+      float: left;
+      margin-right: 1%;
+      margin-bottom: 1%;
+      
+    }
+
+    .merch-items img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .merch-items:nth-child(4),
+    .merch-items:nth-child(8){
+        margin-right: 0;
+    }
+    
+
+    .discount-text {
+      text-align:  center;
+      width: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+
+    }
+
+
+    .discount {
+      width: 85%;
+      height: 350px;
+      margin: 4em auto;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      background-image:url(assets/images/discount-img.jpg);
+    
+    }
+
+    .discount span {
+        font-family:Raleway, sans serif ;
+        color: #fff;
+        font-style: italic;
+        text-shadow: 3px 3px 6px #312a26;
+    }
+
+    .discount h2 {
+        font-size: 2em;
+        color: #fff;
+        text-transform: uppercase;
+        text-shadow: 3px 3px 6px #312a26;
+    }
+
+    .discount-text a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 1em;
+        background-color: #ffffff80;
+        color:#312a26;
+        font-family:Raleway,sans serif;
+        font-weight: 700;
+        margin-top: 1em;
+
+    }
+
+
+    .form-group:nth-child(1){
+        margin-right: 1%;
+    }
+
+    form input, form label, form select, form textarea {
+        display: inline-block;
+        width: 100%;
+        font-family: "Raleway", sans-serif;
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+     
+    form label {
+        font-weight: 700;
+        padding: 0;
+        margin-bottom: 0.5em;
+
+    }
+
+
+
+    .form-group {
+          margin-top: 2em;
+          background-color: #f2f2f2;
+          float: left;
+          width: 49.5%;
+          border-radius: 5px;
+          padding: 2em;
+          height: 650px;
+    }
+    
+    .reservation {
+        width: 85%;
+        margin: 4em auto;
+    }
+
+    form  p {
+       margin: 1 em;
+       text-align: center;
+       font-weight: 700;
+
+
+    }
+
+    .res-time{
+        text-align: center;
+    }
+
+
+    .res-time * {
+        width: auto;
+    }
+
+
+    form h3 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .res-agreement * {
+        width: auto;
+
+    }
+
+
+    form h3::after {
+        content:"";
+        background-size:contain;
+        background-repeat: no-repeat; 
+        background-image: url("assets/images/reservation-cards.png");
+        display: block;
+        width: 150px;
+        height: 30px;
+        margin: auto;
+
+
+    }
+
+    .form textarea {
+        display: inline block;
+        width: 100%;
+        font-family: Raleway,sans-serif;
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+
+    form input[type="submit"] {
+        background-color: #c7a17a;
+        font-weight: 700;
+        text-transform: uppercase;
+        
+    }
+
+    .reservation {
+        width: 85%;
+        margin: 4em auto;
+    }
+
+    form {
+        overflow: auto;
+    }
+ 
+    
+    
+
+    .footer {
+        background-image: url("assets/images/footer-img.jpg");
+        background-size: cover;
+        background-position: center;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+
+
+    .footer-contents {
+        width: 85%;
+        margin: auto;
+        overflow: auto;
+    }
+    
+    .footer-widgets {
+        width: 24.25%;
+        float: left;
+        margin-right: 1%;
+    }
+ 
+    .footer-widgets:nth-child(4){
+        margin-right:0;
+    }
+
+    
+
+
+    .footer-widgets h3 {
+        color: #fff;
+        text-transform:uppercase;
+        text-shadow: 3px 3px 6px #312a26;
+        margin-top: 1em;
+        margin-bottom:1em;
+    }
+
+    .footer-widgets h4 {
+          color: #fff;
+    }
+
+
+    .footer-widgets p {
+           color: #c7a17a;
+    }
+
+
+    .footer td,th {
+        color: #fff;
+        font-family: 'Raleway',sans-serif;
+        text-shadow: 3px 3px 6px #312a26;
+
+    }
+
+   
+
+    .footer-social {
+        color: #fff;
+        background-color:#19100f;
+        overflow: auto;
+        padding: 1em 7.5%
+    }
+
+    .social-widgets {
+        width: 32.66%;
+        float: left;
+        text-align: center;
+    }
+    .social-widgets h3 {
+        text-transform: uppercase;
+    }
+    .social-widgets img {
+      width: 1.5em;
+    }
+
+
+.footer-form * {
+    width: auto;
+}
+
+
+</style>
+   
+</head>
+<body>
+    
+    <div class="wrapper">
+        <nav class="nav">
+            <h1><a href="#">COFFEE BEAN</a></h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Merchandise</a></li>
+                <li><a href="#">Discount</a></li>
+                <li><a href="#">On Sale</a></li>
+                <li><a href="#">Reservation</a></li>
+
+            </ul>
+        </nav>
+    
+    
+    
+        <div class="banner">
+           <div class="banner-text">
+             <h2>Uniquely <span>Fresh Taste</span></h2>
+             <p>Try out tasty coffee bean. produced with unique taste</p>
+           
+             <p><a href="#">Learn more</a></p>
+        
+           </div>
+          
+        </div>
+
+        
+        <div class="ads">
+          <div class="ads-items">
+            <div class="ads-item1">
+               <div class="ads-text">
+                 <h3>SEASONAL COFFEE FLAVORS</h3>
+                 <p><a href="#">Read More</a></p>
+                </div>
+            </div>
+          </div>
+         
+          <div class="ads-items">
+            <div class="ads-item2">
+                <div class="ads-text">
+                  <h3>COFFFE BUNDLE PACAGES</h3>
+                  <p><a href="#">Read More</a></p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+         <div class="merch">
+            <div class="section-header">
+              <span>What happens here</span>
+              <h2>COFFEE HOUSE MERCHANDISE</h2>
+              <hr>
+            </div>
+
+            <div class="merch-gallery">
+                <div class="merch-items">
+                    <img src="assets/images/merch-img1.jpg">
+                    <h3>Arabica-extra Course</h3>
+                    <p>*****</p>
+                    <p>$70.00</p>
+                </div>
+                
+                <div class="merch-items">
+                    <img src="assets/images/merch-img2.jpg">
+                    <h3>Arabica-Fine Grind</h3>
+                    <p>*****</p>
+                    <p>$70.00</p>
+                </div>
+
+                <div class="merch-items">
+                    <img src="assets/images/merch-img3.jpg">
+                    <h3>French Vanilla</h3>
+                    <p>*****</p>
+                    <p>$80.00</p>
+                </div>
+
+                
+                <div class="merch-items">
+                    <img src="assets/images/merch-img4.jpg">
+                    <h3>Delux Chocolate</h3>
+                    <p>*****</p>
+                    <p>$100.00</p>
+                </div>
+
+                <div class="merch-items">
+                    <img src="assets/images/merch-img5.jpg">
+                    <h3>Original Beans</h3>
+                    <p>*****</p>
+                    <p>$100.00</p>
+                </div>
+
+                <div class="merch-items">
+                    <img src="assets/images/merch-img6.jpg">
+                    <h3>paper Pouch</h3>
+                    <p>*****</p>
+                    <p>$71.00</p>
+                </div>
+
+                <div class="merch-items">
+                    <img src="assets/images/merch-img7.jpg">
+                    <h3>Freshly Picked</h3>
+                    <p>*****</p>
+                    <p>$71.00</p>
+                </div>
+                
+                <div class="merch-items">
+                    <img src="assets/images/merch-img8.jpg">
+                    <h3>Mug</h3>
+                    <p>*****</p>
+                    <p>$25.00</p>
+                </div>
+            </div>
+        </div>
+    
+     
+        <div class="discount">
+            <div class="discount-text">
+                <span>We brew them fresh daily</span>
+                <h2>MEMBER"S DISCOUNTS UP TO 40%</h2>
+                <a href ="#"> View Products</a>
+           </div>
+        </div>
+
+
+        <div class="merch">
+            <div class="section-header">
+              <span>What happens here</span>
+              <h2>MERCHANDISE SALE</h2>
+              <hr>
+            </div>
+
+            <div class="merch-gallery">
+                <div class="merch-items">
+                    <img src="assets/images/merch-img9.jpg">
+                    <h3>Arabica with cup</h3>
+                    <p>*****</p>
+                    <p>$90.00</p>
+                </div>
+                
+                <div class="merch-items">
+                    <img src="assets/images/merch-img10.jpg">
+                    <h3>Double Arabica</h3>
+                    <p>*****</p>
+                    <p>$120.00</p>
+                </div>
+
+                <div class="merch-items">
+                    <img src="assets/images/merch-img11.jpg">
+                    <h3>Paper Pouch</h3>
+                    <p>*****</p>
+                    <p>$100.00</p>
+                </div>
+
+                
+                <div class="merch-items">
+                    <img src="assets/images/merch-img12.jpg">
+                    <h3>Double Mug</h3>
+                    <p>*****</p>
+                    <p>$40.00</p>
+                </div>
+
+                
+            </div>
+        </div>
+    
+        <div class="ads">
+            <div class="ads-items">
+              <div class="ads-item3">
+                 <div class="ads-text">
+                   <h3>COFFEE BEAN VARIETIES</h3>
+                   <p><a href="#">Read More</a></p>
+                  </div>
+              </div>
+            </div>
+           
+            <div class="ads-items">
+              <div class="ads-item4">
+                  <div class="ads-text">
+                    <h3>OUR BARISTA'S FAVORITE</h3>
+                    <p><a href="#">Read More</a></p>
+                  </div>
+              </div>
+            </div>
+
+            <div class="ads-items">
+              <div class="ads-item5">
+                  <div class="ads-text">
+                    <h3>THE COFFEE-BEST SELLERS</h3>
+                    <p><a href="#">Read More</a></p>
+                  </div>
+              </div>
+            </div>
+
+            <div class="ads-items">
+              <div class="ads-item6">
+                  <div class="ads-text">
+                    <h3>MORE THAN JUST THE COFFEE</h3>
+                    <p><a href="#">Read More</a></p>
+                  </div>
+              </div>
+            </div>
+
+            
+        </div>
+             <div class="reservation" id="reservation">
+                <div class="section-header">
+                    <h2>Reservation Form</h2>
+                    <hr/>
+                </div>    
+                <form action="#" method="#">
+                    <div class="form-group">
+                        <label for="full-name">Full name</label>
+                        <input 
+                        type="text"
+                        id="full-name";
+                        name="full_name"
+                        placeholder="Last Name, First Name"
+                        required
+                      />
+
+                      <label for="email">Phone Number</label>
+                      <input 
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="mail@mail.com"
+                        required
+                       />
+
+                       <label for="phone">Phone Number</label>
+                       <input
+                         type="number"
+                         id="phone"
+                         name="phone"
+                         placeholder="(+63)912345678"
+                         required
+                      />
+                        
+                       <p>Reservation Details</p>
+                       <label for="guest_num">Number of Guest</label>
+                       <select name="guest_num" id="guest-num" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+
+                        <label for="res-date">Reservation Date</label>
+                        <input type="date" id="res-date" name="res_date" required />
+
+                        <p>Reservation Time</p>
+                        <div class="res-time">
+                        <input
+                          type="radio"
+                          id="am"
+                          name="time"
+                          value="morning"
+                          required
+
+                        />
+                        <label for="am">Morning</label>
+                        <input
+                           type="radio"
+                           name="time"
+                           id="pm"
+                           value="afternoon"
+                           required
+                        />
+                        <label for="pm">Afternoon</label>
+                        <input
+                        type="radio"
+                        id="night"
+                        name="time"
+                        value="night"
+                        required
+                        />
+                        <label for="'night">Night</label>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="request">Additional Request </label>
+                        <textarea
+                        name="request"
+                        id="request"
+                        cols="30"
+                        rows="10"
+                        required>
+                       </textarea>
+
+                       <h3>Payment</h3>
+                       <p>Payment Accepted Cards</p>
+
+                       <label for="name-card">Full name</label>
+                       <input
+                         type="text"
+                         id="name-card"
+                         name="name_card"
+                         placeholder="John Doe"
+                        required
+                       />
+
+                       <label for="cc-num">Credit Card Number</label>
+                       <input
+                         type="number"
+                         id="cc-num"
+                         name="cc_num"
+                         placeholder="1234567890"
+                       />
+
+                       <div class="res-agreement">
+                        <input type="checkbox" id="agree" name="agree" />
+                        <label for=""agree>I agree in the terms and condition.</label>
+                       </div>
+
+                       <input type="submit" name="submit" value="submit" />
+                    </div>
+                </form>
+              <div>
+            <br>
+            <br>
+
+    <div class="footer">
+        <div class="footer-contents">
+            <div class="footer-widgets">
+                     <h3>Opening Hours</h3>
+                     <table>
+                      <thead>
+                        <tr>
+                           <th>Day</th> 
+                           <th>..........</th>
+                           <th>Availability</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>Monday</td>
+                           <td>.........</td>
+                           <td>Closed</td>
+                        </tr>
+                        <tr>
+                           <td>Tuesday</td>
+                           <td>..........</td>
+                           <td>09:00-22:00</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>..........</td>
+                            <td>Closed</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>..........</td>
+                            <td>09:00-22:00</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>..........</td>
+                            <td>09:00-22:00</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>..........</td>
+                            <td>9:00-22:00</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>..........</td>
+                            <td>9:00-22:00</td>
+                        </tr>
+
+                    </tbody>
+                     </table>
+                    
+                     
+
+                </div>    
+                <div class="footer-widgets">
+                <h3>LATEST POST</h3>
+        
+                            <h4>Expand your mind,Change Everthing</h4>
+                            <p>14.02.2017</p>
+                       
+                            <h4>Place to get lost</h4>
+                            <p>14.02.2017</p>
+                        
+                           <h4>Lewis Howes</h4>
+                            <p>14.02.2017</p>
+                     
+                          <h4>Elevate your Expectation</h4>
+                          <p>14.02.2017</p>
+
+                </div>
+                <div class="footer-widgets">
+                    
+                        <h3>CONTACT US</h3>
+                        <p>info@coffeebean.com</p>
+                        <p>1-444-123-4559</p>
+                        <p>Raymond Boulevard 224, New York</p>
+                        <h3>THE LATEST STANDARD POST</h3>
+                        <div class="footer-form"><form action="#" method="post">
+                            <input 
+                            type="text"
+                            id="search"
+                            name="search"
+                          />
+    
+
+                        <input type="submit" name="submit" value="submit" />
+                        </form></div>
+ 
+                </div>
+
+
+                <div class="footer-widgets">
+
+                    <h3>OTHER LOCATIONS</h3>
+                    <h4>Coffee Bean Philippines</h4>
+                    <p>1234 IT PARK</p>
+                    <p>Cebu City</p>
+                    <h4>Coffee Bean Tokyo</h4>
+                    <p>1234 Business Park</p>
+                    <p>Tokyo Japan</p>
+                        
+                </div>
+            
+
+            </div>
+            <div class="footer-social">
+              <div class="social-widgets">
+                <h3>COFFEE BEAN</h3>
+              </div>
+
+
+              <div class="social-widgets">
+                 <img src="assets/images/icon-fb.png">
+                 <img src="assets/images/icon-ig.png">
+                 <img src="assets/images/icon-tw.png">
+              </div>
+              <div class="social-widgets">
+                <p>&copy; 2021 | Kredo IT Abroad</p>
+             </div>
+
+             
+   
+            </div>
+        </div>
+    </div>
+ 
+            
+   
+</div>
+</body>
+</html>
